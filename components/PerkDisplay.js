@@ -3,7 +3,7 @@ import { HStack, Image, Img, VStack } from '@chakra-ui/react'
 import Tooltip from './Tooltip'
 
 const PerkDisplay = ({ toggled, perkSet1, perkSet2 }) => {
-	const [tooltip, setTooltip] = useState({})
+	const [tooltip, setTooltip] = useState(null)
 
 	const configTooltip = (index) => {
 		if (!toggled) {
@@ -66,7 +66,7 @@ const PerkDisplay = ({ toggled, perkSet1, perkSet2 }) => {
 						className={`card ${toggled ? 'is-flipped' : ''}`}
 						key={index}
 						onMouseEnter={() => configTooltip(index)}
-						onMouseLeave={() => setTooltip('')}
+						onMouseLeave={() => setTooltip(null)}
 					>
 						<div className="card-face card-face-front">{front(index)}</div>
 						<div className="card-face card-face-back">{back(index)}</div>
