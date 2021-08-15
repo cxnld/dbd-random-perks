@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { VStack, Text } from '@chakra-ui/react'
-
+import { VStack, Text, Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Content from '../components/Content'
-
 import mainLogo from '../public/logo.png'
 
 export default function Home() {
@@ -24,7 +23,13 @@ export default function Home() {
 					<Text fontSize="4xl">Dead by Daylight Ultimate Bravery</Text>
 				</div>
 				<Content />
-				<footer>A personal project by github/cxnld</footer>
+				<footer>
+					A personal project by &nbsp;
+					<Link isExternal color="teal.500" href="https://github.com/cxnld">
+						github.com/cxnld
+					</Link>
+					. This site is not associated with Behaviour Interactive Inc.
+				</footer>
 			</VStack>
 		</>
 	)
