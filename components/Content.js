@@ -130,8 +130,14 @@ const Content = () => {
 				<Text fontSize="xl">Killer</Text>
 			</HStack>
 
-			<HStack spacing={10} align="start">
-				<VStack width="260px" height="100%" padding="10px">
+			<HStack spacing={0} align="start">
+				<VStack
+					width="260px"
+					height="100%"
+					padding="20px 10px"
+					bg="gray.700"
+					borderLeftRadius="10px"
+				>
 					<Input
 						placeholder="Search"
 						size="md"
@@ -144,7 +150,7 @@ const Content = () => {
 
 					<VStack
 						width="100%"
-						maxHeight="500px"
+						height="550px"
 						align="start"
 						padding="5px"
 						overflow="auto"
@@ -189,11 +195,7 @@ const Content = () => {
 							</Checkbox>
 						))}
 					</VStack>
-					<Button
-						colorScheme="red"
-						marginTop="15px"
-						onClick={() => updatePerkSet()}
-					>
+					<Button colorScheme="red" onClick={() => updatePerkSet()}>
 						Decide My Fate
 					</Button>
 				</VStack>

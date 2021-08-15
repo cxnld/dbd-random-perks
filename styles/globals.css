@@ -1,101 +1,93 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: centera;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #2c2c2c;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .format {
-  background-color: #ffaeff;
-  position: relative;
+	background-color: #ffaeff;
+	position: relative;
 }
 .format .element {
-  position: absolute;
+	position: absolute;
 }
 .format .bg {
-  z-index: 0;
+	z-index: 0;
 }
 .format .cover {
-  z-index: 1;
+	z-index: 1;
 }
 
 .scene {
-  display: flex;
-  flex-direction: row;
-  perspective: 600px;
+	display: flex;
+	flex-direction: row;
+	perspective: 600px;
 }
 
 .card {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  transform-style: preserve-3d;
-  transition: transform 0.7s ease-in-out;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transform-style: preserve-3d;
+	transition: transform 0.7s ease-in-out;
 }
 
 .is-flipped {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .card-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .card-face-front {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .card-face-back {
-  transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
 }
 
 .perk-interface {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 700px;
-  padding-top: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 700px;
+	padding-top: 70px;
+	background-color: 'gray.200';
 }
 
 footer {
-  margin: auto 0px 15px 0px;
+	margin: auto 0px 15px 0px;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+	width: 8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}/*# sourceMappingURL=globals.css.map */
+	background: #888;
+	border-radius: 5px;
+} /*# sourceMappingURL=globals.css.map */

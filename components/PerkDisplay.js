@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Image, Img } from '@chakra-ui/react'
+import { HStack, Image, Img, VStack } from '@chakra-ui/react'
 import Tooltip from './Tooltip'
 
 const PerkDisplay = ({ toggled, perkSet1, perkSet2 }) => {
@@ -52,8 +52,15 @@ const PerkDisplay = ({ toggled, perkSet1, perkSet2 }) => {
 	}
 
 	return (
-		<div className="perk-interface">
-			<div className="scene">
+		<VStack
+			bg="gray.600"
+			w="750px"
+			h="100%"
+			p="20px"
+			borderRightRadius="10px"
+			spacing={5}
+		>
+			<HStack bg="gray.700" p="10px" borderRadius="10px">
 				{[0, 1, 2, 3].map((index) => (
 					<div
 						className={`card ${toggled ? 'is-flipped' : ''}`}
@@ -65,9 +72,9 @@ const PerkDisplay = ({ toggled, perkSet1, perkSet2 }) => {
 						<div className="card-face card-face-back">{back(index)}</div>
 					</div>
 				))}
-			</div>
+			</HStack>
 			{tooltip && <Tooltip data={tooltip} />}
-		</div>
+		</VStack>
 	)
 }
 

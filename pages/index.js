@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Text } from '@chakra-ui/react'
+import { VStack, Text } from '@chakra-ui/react'
 
 import Content from '../components/Content'
 
@@ -10,10 +10,10 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Dead by Daylight</title>
+				<title>Dead by Daylight - Ultimate Bravery</title>
 			</Head>
 
-			<div className="container">
+			<VStack align="center" w="100vw" h="100vh">
 				<div className="title">
 					<Image
 						src={mainLogo}
@@ -25,7 +25,7 @@ export default function Home() {
 				</div>
 				<Content />
 				<footer>A personal project by github/cxnld</footer>
-			</div>
+			</VStack>
 		</>
 	)
 }
